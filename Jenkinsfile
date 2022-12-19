@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
 
     environment {
         DOCKER_IMAGE = "tqluo/sample-react"
@@ -7,7 +7,7 @@ pipeline {
 
     stages {
         stage("build") {
-            agent { node {label 'master'}}
+            agent { node {label 'main'}}
             environment {
                 DOCKER_TAG="image-tag"
             }
