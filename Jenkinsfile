@@ -7,7 +7,6 @@ pipeline {
 
     stages {
         stage("build") {
-            agent { node {label 'main'}}
             environment {
                 DOCKER_TAG="image-tag"
             }
