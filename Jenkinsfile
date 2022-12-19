@@ -2,13 +2,13 @@ pipeline {
     agent none
 
     environment {
-        DOCKER_IMAGE = "sample-react"
+        DOCKER_IMAGE = "tqluo/sample-react"
     }
 
     stages {
         stage("build") {
             environment {
-                DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+                DOCKER_TAG="image-tag"
             }
             steps {
                 sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
