@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("build") {
             environment {
-                DOCKER_TAG="v1.0.0"
+                DOCKER_TAG="v1.0.1"
             }
             steps {
                 sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
