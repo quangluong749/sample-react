@@ -1,0 +1,6 @@
+[all:vars]
+ansible_user='luongtq'
+ansible_become_pass='{{ my_user_password }}' 
+
+[ubuntu-host]
+10.96.34.207
