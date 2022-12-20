@@ -1,0 +1,5 @@
+- hosts: ubuntu-host
+  name: test ansible
+  tasks:
+  - name: create folder temp
+    ansible.builtin.shell: echo 'hello world' > /tmp/test
